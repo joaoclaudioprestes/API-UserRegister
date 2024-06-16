@@ -2,10 +2,11 @@
   "name": "register-users",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "dev": "tsx --watch src/index.ts",
-    "start": "node src/index.ts"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "João C. Prestes",

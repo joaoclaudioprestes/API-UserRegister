@@ -6,10 +6,9 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx --watch src/index.ts",
     "buid": "tsc",
-    "start": "node src/index.js"
+    "start": "node src/index.ts"
   },
   "keywords": [],
   "author": "",

@@ -4,11 +4,11 @@ import cors from "cors";
 
 class App {
   private app: Application;
-  private port: number;
+  private port: number | string;
 
   constructor() {
     this.app = express();
-    this.port = 3000;
+    this.port = process.env.PORT || 3000;
     this.config();
     this.routes();
     this.listen();

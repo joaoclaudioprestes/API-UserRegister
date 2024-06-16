@@ -21,7 +21,7 @@ class App {
   }
 
   routes(): void {
-    this.app.use("/users", userRoute);
+    this.app.use("/", userRoute);
   }
 
   listen(): void {

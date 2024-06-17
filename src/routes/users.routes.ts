@@ -27,3 +27,13 @@ userRoute.get("/all", async (req: Request, res: Response) => {
     res.status(400).json({ error: error.message });
   }
 });
+
+userRoute.delete("/:id", async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    await userService.delete(id);
+    res.status(204);
+  } catch (error: any) {
+    res.status(400).json({ error: error.message });
+  }
+});
